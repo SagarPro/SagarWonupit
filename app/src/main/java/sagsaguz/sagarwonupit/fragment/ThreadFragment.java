@@ -32,7 +32,7 @@ public class ThreadFragment extends Fragment {
     private List<Float> opacityList = new ArrayList<>();
     private ThumbnailAdapter thumbnailAdapter;
 
-    private int colorSelected;
+    //private int colorSelected;
     private int selectedPosition;
 
     private ViewPager vpPost;
@@ -68,23 +68,24 @@ public class ThreadFragment extends Fragment {
 
         if (getArguments() != null) {
             colorList = getArguments().getIntegerArrayList("Colors");
-            colorSelected = getArguments().getInt("Color");
+            selectedPosition = getArguments().getInt("Color");
         }
 
-        Collections.shuffle(colorList);
+        //Collections.shuffle(colorList);
 
         rgbValue = view.findViewById(R.id.rgbValue);
 
         for (int i=0; i<colorList.size(); i++)
             opacityList.add(0.2f);
+        opacityList.set(selectedPosition, 1.0f);
 
-        for (int i=0; i<colorList.size(); i++){
+        /*for (int i=0; i<colorList.size(); i++){
             if (colorSelected == colorList.get(i)){
                 selectedPosition = i;
                 opacityList.set(selectedPosition, 1.0f);
                 break;
             }
-        }
+        }*/
 
         RecyclerView rvThumbnails = view.findViewById(R.id.thumbnailView);
         rvThumbnails.setHasFixedSize(true);
@@ -123,7 +124,7 @@ public class ThreadFragment extends Fragment {
                     llBottom.setVisibility(View.GONE);
                     llBottom1.setVisibility(View.VISIBLE);
                     selectedColor = vpPost.getCurrentItem();
-                    ((MainActivity) getActivity()).setCardColor(colorList.get(selectedColor));
+                    ((MainActivity) getActivity()).setCardColor(selectedPosition, colorList.get(selectedColor));
                 } else {
                     Toast.makeText(getActivity(), "Color is already selected", Toast.LENGTH_SHORT).show();
                 }

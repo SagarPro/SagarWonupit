@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity
 
                 Bundle bundle = new Bundle();
                 bundle.putIntegerArrayList("Colors", (ArrayList<Integer>) selectedColorList);
-                bundle.putInt("Color", selectedColorList.get(position));
+                bundle.putInt("Color", position);
                 ThreadFragment myObj = new ThreadFragment();
                 myObj.setArguments(bundle);
 
@@ -292,15 +292,15 @@ public class MainActivity extends AppCompatActivity
         actionList.add("No Action");
     }
 
-    public void setCardColor(int color){
+    public void setCardColor(int position, int color){
         Card card = new Card();
-        card.setTitle(cardList.get(selectedPosition).getTitle());
-        card.setDescription(cardList.get(selectedPosition).getDescription());
-        card.setTime(cardList.get(selectedPosition).getTime());
-        card.setAction(cardList.get(selectedPosition).getAction());
+        card.setTitle(cardList.get(position).getTitle());
+        card.setDescription(cardList.get(position).getDescription());
+        card.setTime(cardList.get(position).getTime());
+        card.setAction(cardList.get(position).getAction());
         card.setColor(color);
-        selectedColorList.set(selectedPosition, color);
-        cardList.set(selectedPosition, card);
+        selectedColorList.set(position, color);
+        cardList.set(position, card);
         cardsAdapter.notifyDataSetChanged();
     }
 
