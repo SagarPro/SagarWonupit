@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2d3436</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FFFFFF</color>
+
+    <color name="color1">#1abc9c</color>
+    <color name="color2">#2ecc71</color>
+    <color name="color3">#3498db</color>
+    <color name="color4">#9b59b6</color>
+    <color name="color5">#34495e</color>
+    <color name="color6">#16a085</color>
+    <color name="color7">#27ae60</color>
+    <color name="color8">#2980b9</color>
+    <color name="color9">#8e44ad</color>
+    <color name="color10">#2c3e50</color>
+    <color name="color11">#f1c40f</color>
+    <color name="color12">#e67e22</color>
+    <color name="color13">#e74c3c</color>
+    <color name="color14">#ecf0f1</color>
+    <color name="color15">#95a5a6</color>
+    <color name="color16">#f39c12</color>
+    <color name="color17">#d35400</color>
+    <color name="color18">#c0392b</color>
+    <color name="color19">#bdc3c7</color>
+    <color name="color20">#7f8c8d</color>
+    <color name="color21">#22a6b3</color>
+    <color name="color22">#be2edd</color>
+    <color name="color23">#4834d4</color>
+    <color name="color24">#6ab04c</color>
+    <color name="color25">#130f40</color>
+
+    <color name="red">#e74c3c</color>
+    <color name="white">#ecf0f1</color>
+    <color name="silver">#95a5a6</color>
+    <color name="black">#000000</color>
+</resources>
